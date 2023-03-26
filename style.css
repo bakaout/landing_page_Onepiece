@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@font-face{
+    font-family: 'onepiece';
+    src: url('/fonts/one\ piece\ font.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'poppins';
+    src: url('/fonts/Poppins-Regular.otf') format('opentype');
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;/*soma o padding com a margem*/
+    list-style: none;
+    text-decoration: none;
+    font-family: 'poppins';
+    
+}
+
+body{
+    max-width: 1200px;/*largura max da tela*/
+    margin: 0 auto;
+    background-color: rgb(255, 0, 0);
+}
+
+header{
+    background-color: #000;
+    padding: 10px;
+    display: flex;/*deixa flexivel, um ao lado do outro*/
+    align-items: center;
+    justify-content: space-around;/*deixa os itens separados em colunas*/
+}
+
+header h1{
+    color: white;
+    font-family:'onepiece';
+    font-size: 3rem;
+}
+header span{
+    
+    color: red;
+}
+
+header .navegacao{
+    gap: 30px;/*espaçamento entre itens*/
+    display: flex;
+}
+
+
+header a{
+    font-family: onepiece;
+    color: white;
+    padding: 15px;
+    font-size: 1.4rem;
+}
+
+header a:hover{
+    background-color: red;
+    border-radius: 3px;
+}
+
+.section-div{
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;/*dividindo em duas colunas */
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+    padding: 60px;
+}
+.section-div div{
+    margin-top: 120px;
+    align-self: start;
+    color: white;
+    display: grid;
+    gap: 30px;
+}
+.imgluffy{
+    width: 100%;
+    max-width: 100%;
+}
+.section-div div h2{
+    font-weight: 600;
+}
+.section-div div p{
+    font-weight: 200;
+}
+.section-div div a{
+
+    animation: inicializar .7s forwards;/*Chamando o keyframe com a duração de 7s e fazendo com que depois da animação, permaneça na programação normal do link a*/
+
+    justify-self: start;/*serve para que o item não se ajuste ao tamanho da tela após esticada, ele vai ficar do mesmo tamanho */
+    color: white;
+    padding: 12px 20px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+.digitando{
+    font-family: onepiece;
+    font-size: 2.5rem;
+    color: red;
+}
+
+.digitando::after{/*depois que o h2começar a aparecer, a pseudoclasse é ativada*/
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    animation: pisca .5s infinite;/*chama a função pisca a cada 5s infinitamente*/
+}
+
+@keyframes pisca {
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes inicializar {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
