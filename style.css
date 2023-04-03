@@ -22,7 +22,7 @@
 body{
     max-width: 1200px;/*largura max da tela*/
     margin: 0 auto;
-    background-color: rgb(255, 0, 0);
+    background-color: #000;
 }
 
 header{
@@ -85,6 +85,7 @@ header a:hover{
     font-weight: 600;
 }
 .section-div div p{
+    font-size: 1rem;
     font-weight: 200;
 }
 .section-div div a{
@@ -130,3 +131,132 @@ header a:hover{
     }
 }
 
+/*conteudo main*/
+main{
+    background-color: #0f0e0e;
+    color: white;
+}
+
+main .sobre{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+}
+.sobre-titulo{
+    margin: 30px 0px;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.sobre-titulo h1{
+    font-family: onepiece;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: red;
+}
+.sobre-titulo p{
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.sobre-titulo div{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sobre-titulo button{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
+
+.sobre img{
+    animation: efeitoImg .5s ease-in-out forwards;
+    cursor: pointer;
+    grid-row: 2;/*na linha 2*/
+    max-width: 100%;
+    border-radius: 5px;
+    filter: blur(0);
+}
+.sobre img:hover{
+    transition: .5s ease-in;
+    filter: blur(1px);
+}
+.sobre-conteudo{
+    animation: efeitoSeção .5s ease-in-out forwards;
+    grid-column: 2/-1;/*da coluna dois até a um*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.sobre-texto{
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
+}
+.sobre-texto h1{
+    font-family: onepiece;
+    font-size: 2.5rem;
+    color: red;
+    grid-column: 1/-1;
+    
+}
+.sobre-texto h1::after {
+    background-color: red;
+    height: 6px;
+    width: 60px;
+    margin: 20px 0;
+    content: '';
+    display: block;
+    border-radius: 5px;
+}
+.sobre-texto p{
+    font-size: 1.3rem;
+    grid-row: 2;
+    grid-column:  1/-1;
+    font-weight: 200;
+    font-size: 1rem;
+}
+.sobre-info{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+    gap: 15px;
+    align-items: center;
+}
+.sobre-info i{
+    color: red;
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 1.5rem
+}
+.sobre-info p{
+    font-size: 0.9rem
+}
+
+@keyframes efeitoSeção{
+    from{
+        transition: .5s;
+        transform: translate3d(60px, 0, 0);
+    } to{
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+@keyframes efeitoImg{
+    from{
+        transition: .5s;
+        transform: translate3d(-60px, 0, 0);
+    } to{
+        transform: translate3d(0, 0, 0);
+    }
+}
