@@ -23,12 +23,15 @@ digitando()
 
 function trocaIcon(){
 
+    const navMenu = document.querySelector('header .navegacao')
     const ativaMenu = document.querySelector('.fa-bars')/*armazenando tag i*/
     ativaMenu.addEventListener('click', ()=>{/*criando um evento de click e uma função para a troca da tag i*/
         ativaMenu.classList.toggle('fa-x')
+        navMenu.classList.toggle('ativado')/*caso o botao de navegação seja apertado, a classe 'ativado é criada e adicionada'*/
     })
 
 }
 trocaIcon()
+
 
 /*Leia tudo para tentar entender melhor, João*/
