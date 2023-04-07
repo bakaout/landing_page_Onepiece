@@ -159,6 +159,7 @@ main .sobre{
     margin: 30px 0px;
     grid-column: 1/-1;
     text-align: center;
+    color: white;
 }
 .sobre-titulo h1{
     font-family: onepiece;
@@ -274,7 +275,8 @@ main .sobre{
 /* RESPONSIVIDADE */
 
 /*só executa se o tamanho da tela passar de 700px*/
-@media(max-width: 1000px) {
+@media(max-width: 1100px) {
+
 
     header{
         justify-content: space-between;
@@ -289,6 +291,10 @@ main .sobre{
         color: white;
         font-size: 1.8rem;
         cursor: pointer;
+    }
+
+    section .info{
+        width: 300px;
     }
 
     header .navegacao.ativado{
@@ -306,10 +312,12 @@ main .sobre{
     .section-div img {
         display: none;
     }
+  
     .section-div {
-        background-image: url(/imgs/luffypump.png);
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+        grid-template-columns: 1fr;
+        
     }
 
     .sobre img {
@@ -321,3 +329,5 @@ main .sobre{
         grid-column: 1/-1;
     }
 }
+
+/*Interação - MEUS SERVIÇOS*/
