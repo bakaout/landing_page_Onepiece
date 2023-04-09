@@ -347,3 +347,81 @@ main .sobre{
 }
 
 /*Interação - MEUS SERVIÇOS*/
+
+    .services{
+        margin-top: -30px;
+        padding-top: 60px;
+}
+
+.meus-servicos{
+    color: white;
+    padding: 40px;
+}
+.meus-servicos ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+}
+.meus-servicos ul li{
+    display: grid;
+    position: relative;
+    max-width: 300px;
+    height: 300px;
+    gap: 30px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #0f0e0e;
+    padding: 10px;
+    cursor: pointer;
+}
+.meus-servicos ul li i{
+    color: red;
+    font-size: 3rem
+}
+.meus-servicos ul li h3{
+    font-family: 'onepiece';
+    font-size: 2rem;
+    font-weight: 500;
+}
+.meus-servicos ul li p{
+    color: #707070;
+}
+.meus-servicos li::before{
+    content: '';
+    transition: .5s ease-in-out;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-radius: 5px;
+}
+.meus-servicos li::after{
+    content: '';
+    transition: .5s ease-in-out;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-radius: 5px;
+}
+/*efeito de transição*/
+.meus-servicos li:hover::before{/*antes - em cima e na direita*/
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+}
+.meus-servicos li:hover::after{/*depois - em baixo e na esquerda*/
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+}
